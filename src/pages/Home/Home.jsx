@@ -23,7 +23,7 @@ const Home = () => {
       <div className="flex flex-wrap justify-evenly my-10">
         {books.length > 0 &&
           books.map((book) => {
-            return <Card book={book} />;
+            return <Card book={book} key={book._id} />;
           })}
       </div>
     </>
