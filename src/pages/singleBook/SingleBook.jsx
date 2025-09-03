@@ -12,7 +12,9 @@ const SingleBook = () => {
     try {
       console.log(id);
 
-      const response = await axios.get(`http://localhost:3000/book/${id}`);
+      const response = await axios.get(
+        `https://mernstack-1-qmyb.onrender.com/book/${id}`
+      );
       if (response.status === 200) {
         setBook(response.data.data);
       }
@@ -28,7 +30,9 @@ const SingleBook = () => {
     if (!confirmDelete) return;
 
     try {
-      const response = await axios.delete(`http://localhost:3000/book/${id}`);
+      const response = await axios.delete(
+        `https://mernstack-1-qmyb.onrender.com/book/${id}`
+      );
       if (response.status === 200) {
         alert("Book deleted successfully");
         navigate("/"); // redirect to homepage

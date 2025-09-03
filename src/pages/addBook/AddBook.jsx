@@ -41,7 +41,10 @@ const AddBook = () => {
     });
     formData.append("bookCover", bookCover);
 
-    const response = await axios.post("http://localhost:3000/book/", formData);
+    const response = await axios.post(
+      "https://mernstack-1-qmyb.onrender.com/book/",
+      formData
+    );
     // const response = await axios.post("http://localhost:5000/book", formData, {
     // //   headers: { "Content-Type": "multipart/form-data" },
     // // });
